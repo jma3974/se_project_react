@@ -1,0 +1,36 @@
+.main {
+    padding: 0 20px;
+}
+
+.main__card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main__card-image {
+    width: 328px;
+    height: 328px;
+    border-radius: 10px;
+}
+
+.main__card-name {
+text-align: center;
+}
+
+.weather {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* padding-left: 40px; */
+  width: 100%;
+}
+
+.temperature {
+  position: absolute;
+  color: white;
+  font-size: 36px;
+  left: 16px;
+}
