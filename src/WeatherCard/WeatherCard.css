@@ -1,0 +1,17 @@
+.weatherCard__temp {
+  font-size: 20px;
+  font-weight: 700px;
+  margin: 40px auto 34px auto;
+}
+
+
+.weather {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .weather_icon {
+    width: 100%;
+  }

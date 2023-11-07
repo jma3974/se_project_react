@@ -6,7 +6,7 @@ const Main = () => {
     const weatherTemp="55";
   return (
     
-    <main>
+    <main className="main">
         
       <WeatherCard day={false} type="snow" weatherTemp={weatherTemp}/>
     

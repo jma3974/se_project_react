@@ -4,10 +4,11 @@ const Footer = () => {
     console.log('Footer')
 return (
 
-<>
-Developed by Anderson
+<div className='footer'>
 
-</>
+<div>Developed by Anderson</div>
+<div>2023</div>
+</div>
 
 )
 

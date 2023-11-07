@@ -1,8 +1,8 @@
-// import logo from "./images/logo.svg";
 import "./App.css";
 import Main from "./Main/Main.js";
 import Header from "./Header/Header.js";
 import Footer from "./Footer/Footer.js";
+import ModalWithForm from "./ModalWithForm/ModalWithForm.js";
 
 
 function App() {
@@ -13,6 +13,9 @@ function App() {
       <Main />
 
       <Footer />
+
+<ModalWithForm title="New Garment Form">Children</ModalWithForm>
+
     </div>
   );
 }
