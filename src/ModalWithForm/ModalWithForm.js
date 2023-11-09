@@ -12,7 +12,7 @@ const ModalWithForm = ({ children, buttonText = "Add garment", title, onClose, n
         <button type="submit">{buttonText}</button>
       </form>
 
-      <div className="modal__hidden-text">HIDDEN TEXT</div>
+   
     </div></div>
   );
 };

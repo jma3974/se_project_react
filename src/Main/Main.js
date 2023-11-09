@@ -1,9 +1,10 @@
 import "./Main.css";
+const weatherTemp="55";
 import WeatherCard from "../WeatherCard/WeatherCard";
 import ItemCard from "../ItemCard/ItemCard.js";
 
-const Main = () => {
-    const weatherTemp="55";
+const Main = ({onSelectedCard}) => {
+    
   return (
     
     <main className="main">
