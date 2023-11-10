@@ -1,7 +1,7 @@
 import "./Main.css";
-const weatherTemp="55";
 import WeatherCard from "../WeatherCard/WeatherCard";
 import ItemCard from "../ItemCard/ItemCard.js";
+const weatherTemp="55";
 
 const Main = ({onSelectedCard}) => {
     
@@ -11,7 +11,7 @@ const Main = ({onSelectedCard}) => {
         
       <WeatherCard day={false} type="snow" weatherTemp={weatherTemp}/>
     
-      <ItemCard />
+      <ItemCard item='' onSelectedCard={onSelectedCard} />
 
     </main>
   );

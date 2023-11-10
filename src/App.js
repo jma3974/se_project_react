@@ -7,49 +7,53 @@ import ModalForImage from "./ModalForItem/ModalForItem.js";
 import { useState } from "react";
 
 function App() {
-  const [activeModal, setActiveModal] = useState('');
+  const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
-  const handleCreateModal = () =>{
-    setActiveModal('create')
-  }
+  const handleCreateModal = () => {
+    setActiveModal("create");
+  };
   const handleCloseModal = () => {
     setActiveModal("");
-  }
+  };
 
-const handleSelectedCard = (card)= > {
-  setSelectedCard(card)
-}
+  const handleSelectedCard = (card) => {
+    setSelectedCard(card);
+  };
 
-
+  console.log(selectedCard)
   return (
     <div className="page">
-      <Header onCreateModal={handleCreateModal}/>
+      <Header onCreateModal={handleCreateModal} />
 
-      <Main onSelectedCard={handleSelectedCard}/>
+      <Main onSelectedCard={handleSelectedCard} />
 
       <Footer />
       {activeModal === "create" && (
         <ModalWithForm title="New Garment Form" onClose={handleCloseModal}>
-          <div><label>
-            Name
-            <input
-              type="text"
-              name="name"
-              minLength="1"
-              maxLength="30"
-              placeholder="Name"
-            ></input>
-          </label></div>
-          <div><label>
-            Image
-            <input
-              type="url"
-              name="link"
-              minLength="1"
-              maxLength="30"
-              placeholder="Image Url"
-            ></input>
-          </label></div>
+          <div>
+            <label>
+              Name
+              <input
+                type="text"
+                name="name"
+                minLength="1"
+                maxLength="30"
+                placeholder="Name"
+              ></input>
+            </label>
+          </div>
+          <div>
+            <label>
+              Image
+              <input
+                type="url"
+                name="link"
+                minLength="1"
+                maxLength="30"
+                placeholder="Image Url"
+              ></input>
+            </label>
+          </div>
           <label>
             <p>Select the weather type:</p>
             <div>
@@ -69,9 +73,13 @@ const handleSelectedCard = (card)= > {
           </label>
         </ModalWithForm>
       )}
-      <ModalForImage/>
-    </div>
-  );
-}
+{activeModal === 'preview' && (
+      <ModalForImage selectedCard={selectedCard}/>
+
+     
+   
+  )}
+  </div>
+  );}
 
 export default App;

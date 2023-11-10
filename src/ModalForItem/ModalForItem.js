@@ -1,22 +1,17 @@
 import "./ModalForItem.css";
 
-const ModalForItem = ({ children, item, weather, onClose, name, }) => {
-console.log('modal for image')
+const ModalForItem = ({ selectedCard }) => {
+  console.log("modal for image");
 
-
-    return (
-        <div className={`modal`}>
+  return (
+    <div className={`modal`}>
         <div className="modal__content">
-          <button type="button" onClick={onClose}>X</button>
           <img />
-        <div>{item}</div>
-        <div>Weather: {weather}</div>
-     
-      </div></div>
-
-
-    )
-} 
-
+          <div>Text for item name</div>
+          <div> Weather type</div>
+        </div>
+      </div>
+  );
+};
 
 export default ModalForItem;
