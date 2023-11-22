@@ -1,26 +1,21 @@
-import logo from "./images/logo.svg";
+
 import "./App.css";
+import Header from "./Header/Header";
 
 function App() {
   return (
     <div>
-      <header className="header">
-        <div className="header__logo">
-          <div>
-            <img src={require("./images/logo.svg").default} alt='wtwr logo'/>
-          </div>
-          <div>date</div>
-        </div>
-        <div className="header__avatar-logo">
-          <div>
-            <button type="text">Add new clothes</button>
-          </div>
-          <div>name</div>
-          <div>
-            <img src={require("./images/avatar.svg").default} alt='the avatar image for the account' />
-          </div>
-        </div>
-      </header>
+      <Header />
+      <main>
+          <section id='weather'>
+Weather
+
+          </section>
+          <section id='cards'>
+Card Section
+
+          </section>
+      </main>
     </div>
   );
 }
