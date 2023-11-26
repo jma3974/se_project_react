@@ -1,4 +1,5 @@
 const ItemCard = ({ clothingItem }) => {
+  console.log("item card")
   return (
     <div>
       <div>

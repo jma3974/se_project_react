@@ -1,6 +1,6 @@
 import {weatherOptions,} from "../utils/constants.js";
 
-const WeatherCard = ({day, type, temperature = "" }) => {
+const WeatherCard = ({day, type, temperature = '' }) => {
   console.log("WeatherCard");
   const weatherImageSrc = weatherOptions.filter((i) => {
     // console.log(i);
@@ -13,7 +13,7 @@ const WeatherCard = ({day, type, temperature = "" }) => {
 
   return (
     <section className="main__weather" id="weather">
-      <div className="main__weather-temp">75F</div>
+      <div className="main__weather-temp">{temperature}</div>
 
       <img
         className="main__weather-icon"

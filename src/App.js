@@ -1,27 +1,21 @@
 import "./App.css";
 import "./Main/Main.css";
+import "./Footer/Footer.css";
 import Header from "./Header/Header";
-import WeatherCard from "./WeatherCard/WeatherCard";
-import ItemCard from "./ItemCard/ItemCard.js";
-import { defaultClothingItems } from "./utils/constants.js";
+import Main from "./Main/Main.js";
+import Footer from "./Footer/Footer.js";
+import ModalWithForm from "./ModalWithForm/ModalWithForm.js";
 
 function App() {
+  const temperature = "55F";
+
   return (
     <div>
       <Header />
-      <main className="main">
-        <WeatherCard day={false} type="clear" />
-        <div className='main__reco'>Today is 75 deg F / You may want to wear: </div>
-        <section className="main__cards" id="cards">
-          
-          {defaultClothingItems.map((clothingItem) => <ItemCard clothingItem={clothingItem} />
-            
-          )}
-        </section>
-      </main>
+      <Main temperature={temperature} />
+      <Footer />
+      <ModalWithForm title='New Garment'>These are the children</ModalWithForm>
     </div>
   );
-
-
 }
 export default App;
