@@ -1,7 +1,7 @@
 // import logo from "../images/logo.svg";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({onCreateModal}) => {
   console.log("header");
 
   return (
@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <div className="header__avatar-logo">
         <div>
-          <button type="text">Add new clothes</button>
+          <button type="text" onClick={onCreateModal}> Add new clothes</button>
         </div>
         <div>name</div>
         <div>
