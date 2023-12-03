@@ -1,5 +1,5 @@
 // import logo from "../images/logo.svg";
-import "./Header.css";
+import "../blocks/Header.css";
 
 const Header = ({onCreateModal}) => {
   console.log("header");

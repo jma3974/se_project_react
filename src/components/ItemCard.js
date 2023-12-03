@@ -1,5 +1,5 @@
-const ItemCard = ({ clothingItem }) => {
-  console.log("item card")
+const ItemCard = ({ clothingItem, onSelectedCard }) => {
+  
   return (
     <div>
       <div>
@@ -7,6 +7,7 @@ const ItemCard = ({ clothingItem }) => {
           className="main__cards-image"
           src={clothingItem.link}
           alt={clothingItem.name}
+          onClick={() => onSelectedCard(clothingItem)}
         />
       </div>
       <div className="main__cards-name">{clothingItem.name}</div>
