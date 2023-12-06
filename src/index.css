@@ -3,8 +3,12 @@
 @import url(../src/blocks/Footer.css);
 @import url(../src/blocks/Header.css);
 @import url(../src/blocks/Main.css);
-@import url(../src/blocks/ModalWithForm.css);
+@import url(../src/blocks/Modal.css);
+/* @import url(../src/blocks/ModalWithForm.css);
+@import url(../src/blocks/ModalWithPreview.css); */
 @import url(../src/blocks/WeatherCard.css);
+
+
 
 
 @font-face {

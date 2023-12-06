@@ -1,15 +1,18 @@
-
-
-const ModalWithPreview = ({selectedCard, onClose}) => {
-  console.log("item preview");
-
+const ModalWithPreview = ({ selectedCard, onClose }) => {
   return (
-    <div className={` modal `}>
-      <div className="modal__content">
-      <button className= 'modal__close' type='button' onClick={onClose}>X</button>
-        <img src={selectedCard.link} />
-        <div> {selectedCard.name}</div>
-        <div>{selectedCard.weather}</div>
+    <div className={`modal `}>
+      <div className="modal__preview_container">
+        <img
+          className="modal__preview_image"
+          src={selectedCard.link}
+          alt={selectedCard.name}
+        />
+        <button className="modal__close modal__preview_close" type="button" onClick={onClose} />
+
+        <div className="modal__preview_text-container">
+          <div className="modal__preview-text"> {selectedCard.name}</div>
+          <div>Weather: {selectedCard.weather}</div>
+        </div>
       </div>
     </div>
   );

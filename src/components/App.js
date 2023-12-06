@@ -40,12 +40,12 @@ function App() {
       <Main temperature={temp} onSelectedCard={handleSelectedCard} />
       <Footer />
       {activeModal === "create" && (
-        <ModalWithForm title="New Garment" onClose={handleCloseModal}>
-          <div className="modal__element">
-            <label className="modal__label">
+        <ModalWithForm title="New garment" onClose={handleCloseModal}>
+          <div className="modal__form_element">
+            <label className="modal__form_label">
               Name </label>
               <div>
-              <input className="modal__form modal__input"
+              <input className="modal__form modal__input-text"
                 type="text"
                 name="name"
                 minLength="1"
@@ -55,10 +55,10 @@ function App() {
             
           </div>
           <div>
-            <label className="modal__label">
+            <label className="modal__form_label">
               Image</label>
               <div>
-              <input className="modal__form modal__input" type="url" name="link" placeholder="Image URL" /></div>
+              <input className="modal__form modal__input-text" type="url" name="link" placeholder="Image URL" /></div>
             
             <p>Select the weather type:</p>
             <div>
