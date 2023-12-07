@@ -3,7 +3,7 @@
 // key: 0f5c09e8ea7ca947106c19059353b7c5
 
 const latitude = 47.38;
-const longitude = 122.23;
+const longitude = -122.23;
 const APIKey = "0f5c09e8ea7ca947106c19059353b7c5";
 
 export const getForecastWeather = () => {
