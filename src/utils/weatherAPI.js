@@ -8,7 +8,7 @@ const APIKey = "0f5c09e8ea7ca947106c19059353b7c5";
 
 export const getForecastWeather = () => {
   const weatherAPI = fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&unit=imperial&appid=${APIKey}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKey}`
   ).then((res) => {
     if (res.ok) {
       return res.json();
