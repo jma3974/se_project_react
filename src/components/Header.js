@@ -2,15 +2,15 @@
 import "../blocks/Header.css";
 
 const Header = ({onCreateModal}) => {
-  console.log("header");
 
-  return (
+  const currentDate = new Date().toLocaleString('default', { month: 'long', day: 'numeric' });
+    return (
     <header className="header">
       <div className="header__logo">
         <div>
           <img src={require("../images/logo.svg").default} alt="wtwr logo" />
         </div>
-        <div>date</div>
+        <div>{currentDate}</div>
       </div>
       <div className="header__avatar-logo">
         <div>
