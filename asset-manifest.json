@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/se_project_react/static/css/main.cce60210.css",
+    "main.js": "/se_project_react/static/js/main.17b7bada.js",
+    "static/media/avatar.svg": "/se_project_react/static/media/avatar.d421c9d283398cad34af4e5498cd7055.svg",
+    "static/media/CabinetGrotesk-Regular.woff": "/se_project_react/static/media/CabinetGrotesk-Regular.133340b3f2339c545d7a.woff",
+    "static/media/CabinetGrotesk-Regular.woff2": "/se_project_react/static/media/CabinetGrotesk-Regular.36628114dad0d602be78.woff2",
+    "static/media/day-snow.svg": "/se_project_react/static/media/day-snow.91deb49805a457b1125fb9ce6018ce37.svg",
+    "static/media/night-snow.svg": "/se_project_react/static/media/night-snow.62399599e4bc2b02a377c6d0193c8895.svg",
+    "static/media/day-storm.svg": "/se_project_react/static/media/day-storm.58c2d1362f17bdebee4c2fe9b9cf4a96.svg",
+    "static/media/night-storm.svg": "/se_project_react/static/media/night-storm.71d7d80c1ce1c3c8fadb8c4a7776cf34.svg",
+    "static/media/day-rainy.svg": "/se_project_react/static/media/day-rainy.3c9ca4e68e286284e53f88e641760561.svg",
+    "static/media/night-rain.svg": "/se_project_react/static/media/night-rain.65654022a3c594bc4f5c045754e9ae00.svg",
+    "static/media/day-fog.svg": "/se_project_react/static/media/day-fog.e1d635f3bb75a2d9641b2503ba5680f1.svg",
+    "static/media/night-fog.svg": "/se_project_react/static/media/night-fog.846e570fefa5bc1b1fa7f4b3a2426ffd.svg",
+    "static/media/logo.svg": "/se_project_react/static/media/logo.2e52a3b54443b649938df0a9b3d231e2.svg",
+    "static/media/love_button.svg": "/se_project_react/static/media/love_button.50fc1486490dde97ccc1.svg",
+    "static/media/night-cloudy.svg": "/se_project_react/static/media/night-cloudy.375d54ff80748e9e06f98a1e0e734396.svg",
+    "static/media/day-cloudy.svg": "/se_project_react/static/media/day-cloudy.c6f2009009e13c6ec13f45acfcce3d61.svg",
+    "static/media/close_icon.svg": "/se_project_react/static/media/close_icon.41654df85174806f9922.svg",
+    "index.html": "/se_project_react/index.html",
+    "static/media/close_icon_3.svg": "/se_project_react/static/media/close_icon_3.34bff1eb1ed0331b4c52.svg",
+    "static/media/day-clear.svg": "/se_project_react/static/media/day-clear.54fae7d1cdd7f1c926f072b2a3543417.svg",
+    "static/media/night-clear.svg": "/se_project_react/static/media/night-clear.94c0f6f992836f9d41bb02d04b09a959.svg",
+    "main.cce60210.css.map": "/se_project_react/static/css/main.cce60210.css.map",
+    "main.17b7bada.js.map": "/se_project_react/static/js/main.17b7bada.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cce60210.css",
+    "static/js/main.17b7bada.js"
+  ]
+}
