@@ -32,8 +32,9 @@ console.log(filteredCards)
         Today is {temperature}° F/ You may want to wear:
       </div>
       <section className="main__cards" id="cards">
+        
         {filteredCards.map((clothingItem) => (
-          <ItemCard
+          <ItemCard 
             clothingItem={clothingItem}
             key={clothingItem._id}
             onSelectedCard={onSelectedCard}
