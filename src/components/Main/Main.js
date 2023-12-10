@@ -15,10 +15,10 @@ function Main({ temperature, onSelectedCard }) {
     }
   }, [temperature]);
 
-console.log(weatherType)
+
 
 const filteredCards = defaultClothingItems.filter((clothingItem)=> {
-console.log(clothingItem)
+
 return clothingItem.weather.toLowerCase() === weatherType
 
 })

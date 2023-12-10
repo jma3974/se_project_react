@@ -1,7 +1,9 @@
+import "../ItemCard/ItemCard.css";
+
 const ItemCard = ({ clothingItem, onSelectedCard }) => {
   return (
-    <div>
-      <div className="main__cards_header">
+    <div className="itemCard">
+      <div className="main__cards_header itemCard__header">
         <div className="main__cards-name">{clothingItem.name}</div>
         <button type="button" className="main__cards-like" />
       </div>

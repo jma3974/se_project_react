@@ -7,6 +7,21 @@
     padding: 0 20px;
 }
 
+.header__button {
+    border-radius: 5px;
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+.header__button:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.header__button:disabled {
+    background-color: rgba(0,0,0,0.3);
+}
+
 .header__logo {
     display: flex;
     align-items: center;
