@@ -1,5 +1,5 @@
-// import logo from "../images/logo.svg";
-import "../blocks/Header.css";
+import "../Header/Header.css"
+
 
 const Header = ({onCreateModal}) => {
 
@@ -8,7 +8,7 @@ const Header = ({onCreateModal}) => {
     <header className="header">
       <div className="header__logo">
         <div>
-          <img src={require("../images/logo.svg").default} alt="wtwr logo" />
+          <img src={require("../../images/logo.svg").default} alt="wtwr logo" />
         </div>
         <div>{currentDate}</div>
       </div>
@@ -19,7 +19,7 @@ const Header = ({onCreateModal}) => {
         <div>name</div>
         <div>
           <img
-            src={require("../images/avatar.svg").default}
+            src={require("../../images/avatar.svg").default}
             alt="the avatar image for the account"
           />
         </div>

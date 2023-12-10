@@ -1,7 +1,7 @@
-import "../blocks/Main.css";
-import WeatherCard from "./WeatherCard.js";
-import ItemCard from "./ItemCard.js";
-import { defaultClothingItems } from "../utils/constants.js";
+import "../Main/Main.css";
+import WeatherCard from "../WeatherCard/WeatherCard.js"
+import ItemCard from "../ItemCard/ItemCard.js";
+import { defaultClothingItems } from "../../utils/constants.js";
 import { useMemo } from "react";
 
 function Main({ temperature, onSelectedCard }) {
@@ -23,7 +23,7 @@ return clothingItem.weather.toLowerCase() === weatherType
 
 })
 
-console.log(filteredCards)
+
 
   return (
     <main className="main">

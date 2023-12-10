@@ -58,8 +58,8 @@
 }
 
 .main__cards-like {
-  background-image: url("../images/love_button.svg");
-  background: url("../images/love_button.svg") center no-repeat;
+  background-image: url("../../images/love_button.svg");
+  background: url("../../images/love_button.svg") center no-repeat;
   background-size: 21px 18px;
   width: 21px;
   height: 18px;

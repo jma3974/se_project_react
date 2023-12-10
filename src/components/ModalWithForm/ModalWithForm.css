@@ -72,11 +72,11 @@
 }
 
 .modal__add-form_close {
-  background-image: url("../images/close_icon.svg");
+  background-image: url("../../images/close_icon.svg");
 }
 
 .modal__preview_close {
-  background-image: url("../images/close_icon_3.svg");
+  background-image: url("../../images/close_icon_3.svg");
 }
 
 .modal__text {

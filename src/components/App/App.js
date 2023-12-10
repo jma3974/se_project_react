@@ -1,10 +1,10 @@
-import "../../src/index.css"
-import Header from "../components/Header";
-import Main from "../components/Main.js";
-import Footer from "../components/Footer.js";
-import ModalWithForm from "../components/ModalWithForm.js";
-import ModalWithPreview from "../components/ModalWithPreview.js";
-import { getForecastWeather, parseWeatherData } from "../utils/weatherAPI.js";
+import "../App/App.css"
+import Header from "../Header/Header";
+import Main from "../Main/Main.js";
+import Footer from "../Footer/Footer.js";
+import ModalWithForm from "../ModalWithForm/ModalWithForm.js";
+import ModalWithPreview from "../ModalWithPreview/ModalWithPreview.js";
+import { getForecastWeather, parseWeatherData } from "../../utils/weatherAPI.js";
 import { useEffect, useState } from "react";
 
 function App() {

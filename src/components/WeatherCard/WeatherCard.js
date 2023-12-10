@@ -1,4 +1,4 @@
-import {weatherOptions,} from "../utils/constants.js";
+import {weatherOptions,} from "../../utils/constants.js";
 
 const WeatherCard = ({day, type, temperature = '' }) => {
   console.log("WeatherCard");

@@ -1,3 +1,5 @@
+import "../ModalWithPreview/ModalWithPreview.css";
+
 const ModalWithPreview = ({ selectedCard, onClose }) => {
   return (
     <div className={`modal `}>
