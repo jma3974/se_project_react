@@ -1,3 +1,4 @@
+import "../WeatherCard/WeatherCard.css";
 import {weatherOptions,} from "../../utils/constants.js";
 
 const WeatherCard = ({day, type, temperature = '' }) => {
