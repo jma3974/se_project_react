@@ -62,18 +62,18 @@ function App() {
               <input className="modal__form modal__input-text" type="url" name="link" placeholder="Image URL" /></div>
             
             <p>Select the weather type:</p>
-            <div>
+            <div className="modal__input_radio-buttons">
               <div className="modal__input-radio">
                 <input type="radio" id="hot" value="hot" name='selectTemp'/>
-                <label>Hot</label>
+                <label className="modal__input-radio-label">Hot</label>
               </div>
               <div className="modal__input-radio">
                 <input type="radio" id="warm" value="warm" name='selectTemp'/>
-                <label>Warm</label>
+                <label className="modal__input-radio-label">Warm</label>
               </div>
               <div className="modal__input-radio">
                 <input type="radio" id="cold" value="cold" name='selectTemp'/>
-                <label>Cold</label>
+                <label className="modal__input-radio-label">Cold</label>
               </div>
             </div>
           </div>
