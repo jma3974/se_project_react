@@ -6,16 +6,17 @@ const latitude = 47.38;
 const longitude = -122.23;
 const APIKey = "0f5c09e8ea7ca947106c19059353b7c5";
 
+const processServerResponse = (res) => {
+  if (!res.ok) {
+    return Promise.reject(`Error: ${res.status}`);
+  }
+  return res.json();
+};
+
 export const getForecastWeather = () => {
   const weatherAPI = fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKey}`
-  ).then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      return Promise.reject(`error: ${res.status}`);
-    }
-  });
+  ).then(processServerResponse);
 
   return weatherAPI;
 };

@@ -43,3 +43,7 @@
   border: 0;
   margin-left: 10px;
 }
+
+.main__cards-like:hover {
+cursor: pointer;
+}

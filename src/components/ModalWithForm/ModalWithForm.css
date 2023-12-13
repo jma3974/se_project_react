@@ -61,18 +61,10 @@
 
 .modal__input_radio-buttons {
   color: rgba(0 ,0, 0, 0.5);
-}
-
-.modal__input_radio-buttons:checked {
-  color: red;
+  padding-bottom: 24px;
 }
 
 .modal__input-radio {
-  margin-bottom: 8px;
-}
-
-.modal__input-radio:checked {
-  color: blue;
   margin-bottom: 8px;
 }
 
