@@ -71,6 +71,11 @@
   margin-bottom: 8px;
 }
 
+.modal__input-radio:checked {
+  color: blue;
+  margin-bottom: 8px;
+}
+
 .modal__input-radio-label {
  padding-left: 11px;
 
