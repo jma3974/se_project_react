@@ -16,6 +16,7 @@
 
 .header__button:hover {
     background-color: rgba(0,0,0,0.6);
+    cursor: pointer;
 }
 
 .header__button:disabled {

@@ -17,16 +17,17 @@ const Header = ({ onCreateModal }) => {
       </div>
       <div className="header__avatar-logo">
         <div>
-          <button className="header__button" type="text" onClick={onCreateModal}>
+          <button
+            className="header__button"
+            type="text"
+            onClick={onCreateModal}
+          >
             Add new clothes
           </button>
         </div>
         <div>name</div>
         <div>
-          <img
-            src={avatarImage}
-            alt="the avatar image for the account"
-          />
+          <img src={avatarImage} alt="the avatar image for the account" />
         </div>
       </div>
     </header>
