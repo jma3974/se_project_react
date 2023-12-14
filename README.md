@@ -1,21 +1,20 @@
-# What to Wear App
+# What to wear application
 
 ## Description
-This is the first stage of developing an app that will identify your location and relevant weather information to provide a list of recommended clothing choices. Secondarily, there will be an option that allows new garments to be added and assigned to weather conditions.
+This is the first stage of an app that will use weather information based on the users location and provide clothing recommendations.
 
-Initially, the latitude and longitude are fixed, and all garments are static.
+Additional functionality will include the ability to upload images and garment descriptions based on weather types.
 
+Initially, latitide and longitude are fixed, as well as the current options for garments.
 
-## Technologies used
+**Technology used**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Create React App](https://github.com/facebook/create-react-app)
 
-## Figma
+**Figma**
 
-[Link to poject on Figma](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?type=design&mode=design)
+[Link to project Figma](https://www.figma.com/file/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311%3A433&mode=dev)
 
+Application preview
 
-### Deployment
-
-This section has moved here: [Link to preview of app](https://jma3974.github.io/se_project_react/)
-
+[Link to WTWR](https://jma3974.github.io/se_project_react/)
