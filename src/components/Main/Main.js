@@ -5,11 +5,8 @@ import { defaultClothingItems } from "../../utils/constants.js";
 import { useMemo } from "react";
 
 function Main({ temperature, onSelectedCard }) {
-  const getWeatherType = () =>{
 
-    
-  }
-  const weatherType = useMemo(() => {
+  const weatherType = (() => {
     if (temperature >= 86) {
       return "hot";
     } else if (temperature >= 66 && temperature <= 85) {
@@ -17,7 +14,7 @@ function Main({ temperature, onSelectedCard }) {
     } else if (temperature <= 65) {
       return "cold";
     }
-  }, [temperature]);
+  })();
 
 
 
