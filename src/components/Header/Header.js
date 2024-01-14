@@ -1,6 +1,7 @@
 import "../Header/Header.css";
 import avatarImage from "../../images/avatar.svg";
 import wtwrlogo from "../../images/logo.svg";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 const Header = ({ onCreateModal }) => {
   const currentDate = new Date().toLocaleString("default", {
@@ -15,19 +16,25 @@ const Header = ({ onCreateModal }) => {
         </div>
         <div>{currentDate}</div>
       </div>
-      <div className="header__avatar-logo">
+      <div className="header__user-interface">
         <div>
-          <button
-            className="header__button"
-            type="text"
-            onClick={onCreateModal}
-          >
-            Add new clothes
-          </button>
+          <ToggleSwitch />
         </div>
-        <div>name</div>
-        <div>
-          <img src={avatarImage} alt="the avatar image for the account" />
+        
+        <div className="header__avatar-logo">
+          <div>
+            <button
+              className="header__button"
+              type="text"
+              onClick={onCreateModal}
+            >
+              + Add clothes
+            </button>
+          </div>
+          <div>name</div>
+          <div>
+            <img src={avatarImage} alt="the avatar image for the account" />
+          </div>
         </div>
       </div>
     </header>
