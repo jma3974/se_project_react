@@ -23,6 +23,7 @@ const ToggleSwitch = () => {
 };
 const Checkbox = ({ label, value, onChange }) => {
   return (
+
     <>
       <input
         type="checkbox"
@@ -33,8 +34,8 @@ const Checkbox = ({ label, value, onChange }) => {
       />
 
       <label className="toggleSwitch__label" htmlFor={`react-switch-new`}>
-      <span className="toggleSwitch__button" />{label}
-      
+        <span className="toggleSwitch__button" />
+        {label}
       </label>
     </>
   );

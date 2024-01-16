@@ -2,6 +2,7 @@ import "../Header/Header.css";
 import avatarImage from "../../images/avatar.svg";
 import wtwrlogo from "../../images/logo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import ToggleSwitch_test from "../ToggleSwitch/ToggleSwitch_test"
 
 const Header = ({ onCreateModal }) => {
   const currentDate = new Date().toLocaleString("default", {
@@ -18,9 +19,9 @@ const Header = ({ onCreateModal }) => {
       </div>
       <div className="header__user-interface">
         <div>
-          <ToggleSwitch />
+          <ToggleSwitch_test />
         </div>
-        
+
         <div className="header__avatar-logo">
           <div>
             <button
