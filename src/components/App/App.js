@@ -42,7 +42,7 @@ function App() {
   useEffect(() => {
     getForecastWeather().then((data) => {
       const temperature = parseWeatherData(data);
-      
+      onslotchange.log(temperature)
       setTemp(temperature);
     }) 
     .catch((error) => { console.error('Error', error);});
