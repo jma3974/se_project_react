@@ -9,19 +9,36 @@ function Main({ weatherTemp, onSelectedCard }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   console.log(currentTemperatureUnit);
   const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || 999;
+  console.log(temp)
+
   const weatherType = (() => {
-    if (temp >= 86) {
-      return "hot";
-    } else if (temp >= 66 && temp <= 85) {
-      return "warm";
-    } else if (temp <= 65) {
-      return "cold";
+    if (currentTemperatureUnit === "F") {
+      if (temp >= 86) {
+        return "hot";
+      } else if (temp >= 66 && temp <= 85) {
+        return "warm";
+      } else if (temp <= 65) {
+        return "cold";
+      }
+    } else {
+      if (currentTemperatureUnit === "C") {
+        if (temp >= 86) {
+          return "hot";
+        } else if (temp >= 66 && temp <= 85) {
+          return "warm";
+        } else if (temp <= 65) {
+          return "cold";
+        }
+      }
     }
   })();
 
-  const filteredCards = defaultClothingItems.filter((clothingItem) => {
-    return clothingItem.weather.toLowerCase() === weatherType;
-  }, [weatherTemp]);
+  const filteredCards = defaultClothingItems.filter(
+    (clothingItem) => {
+      return clothingItem.weather.toLowerCase() === weatherType;
+    },
+    [weatherTemp]
+  );
 
   return (
     <main className="main">

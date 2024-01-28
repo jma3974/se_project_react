@@ -44,9 +44,12 @@ function App() {
       const temperature = parseWeatherData(data);
       
       setTemp(temperature);
+      console.log(temperature)
     }) 
     .catch((error) => { console.error('Error', error);});
-  });
+    
+  },[]);
+  
 console.log(currentTemperatureUnit)
 
   return (
