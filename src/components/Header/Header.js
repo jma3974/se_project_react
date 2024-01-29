@@ -1,7 +1,8 @@
 import "../Header/Header.css";
 import avatarImage from "../../images/avatar.svg";
 import wtwrlogo from "../../images/logo.svg";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch"
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import { Link } from "react-router-dom";
 
 const Header = ({ onCreateModal }) => {
   const currentDate = new Date().toLocaleString("default", {
@@ -12,7 +13,9 @@ const Header = ({ onCreateModal }) => {
     <header className="header">
       <div className="header__logo">
         <div>
-          <img src={wtwrlogo} alt="wtwr logo" />
+          <Link to="/">
+            <img src={wtwrlogo} alt="wtwr logo" />
+          </Link>
         </div>
         <div>{currentDate}</div>
       </div>
@@ -31,7 +34,7 @@ const Header = ({ onCreateModal }) => {
               + Add clothes
             </button>
           </div>
-          <div>name</div>
+          <Link to="/profile">name</Link>
           <div>
             <img src={avatarImage} alt="the avatar image for the account" />
           </div>
