@@ -1,16 +1,19 @@
 import "../Profile/Profile.css";
-import avatarImage from "../../images/avatar.svg";
+import SideBar from "../SideBar/SideBar.js";
+import ClothingSection from "../ClotheSection/ClothesSection.js"
 
 function Profile({ onCreateModal }) {
   return (
     <div className="profile">
-      <div className="profile__avatar">
+        <SideBar />
+        <ClothingSection />
+      {/* <div className="profile__avatar">
         <div>
           <img src={avatarImage} alt="the avatar image for the account" />
         </div>
         <div className="profile__avatar_name">name</div>
-      </div>
-      <div className="profile__clothingItems">
+      </div> */}
+      {/* <div className="profile__clothingItems">
       <div className="profile__clothingItems_header">
         <div>Your Items</div>
         <div>
@@ -28,7 +31,7 @@ function Profile({ onCreateModal }) {
 Cards with profile
 
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
