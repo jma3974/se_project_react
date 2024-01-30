@@ -44,7 +44,7 @@ function Main({ weatherTemp, onSelectedCard }) {
     <main className="main">
       <WeatherCard day={false} type="clear" weatherTemp={temp} />
       <div className="main__reco">
-        Today is {temp}° F/ You may want to wear:
+        Today is {temp}° {currentTemperatureUnit}/ You may want to wear:
       </div>
       <section className="main__cards" id="cards">
         {filteredCards.map((clothingItem) => (
