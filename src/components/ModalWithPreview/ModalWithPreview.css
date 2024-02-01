@@ -40,7 +40,9 @@
 }
 
 .modal__preview_delete {
-  justify-self: end;
+  display: flex;
+  position: absolute;
+  left: 100px;
   color: red;
 }
 
