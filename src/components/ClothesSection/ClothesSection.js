@@ -1,10 +1,11 @@
 import { defaultClothingItems } from "../../utils/constants.js";
-import ItemCard from "../ItemCard/ItemCard";
+import ItemCard from "../ItemCard/ItemCard.js";
+import "../ItemCard/ItemCard.css";
+import "./ClothesSection.css";
 
-const ClothingSection =({ onCreateModal, onSelectedCard }) => {
-return (
-
-<div className="profile__clothingItems">
+const ClothingSection = ({ onCreateModal, onSelectedCard }) => {
+  return (
+    <div>
       <section className="profile__clothingItems_header">
         <div>Your Items</div>
         <div>
@@ -15,24 +16,19 @@ return (
           >
             + Add clothes
           </button>
-          </div>
-        </section>
-        <section>
-
-{defaultClothingItems.map((clothingItem) => (
+        </div>
+      </section>
+      <section className="profile__clothingItems">
+        {defaultClothingItems.map((clothingItem) => (
           <ItemCard
             clothingItem={clothingItem}
             key={clothingItem._id}
             onSelectedCard={onSelectedCard}
           />
         ))}
-
-        </section>
-      </div>
-
-)
-
-
-}
+      </section>
+    </div>
+  );
+};
 
 export default ClothingSection;

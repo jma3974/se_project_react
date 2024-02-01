@@ -29,6 +29,7 @@
 }
 
 .modal__preview_text-container {
+  display: flex;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -36,6 +37,11 @@
   margin-top: 20px;
   margin-bottom: 32px;
   margin-left: 32px;
+}
+
+.modal__preview_delete {
+  justify-self: end;
+  color: red;
 }
 
 .modal__preview-text {
