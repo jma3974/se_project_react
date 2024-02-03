@@ -1,18 +1,64 @@
 import "../ModalWithForm/ModalWithForm.css";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const ModalDeleteConfirmation = ({ children, buttonText, title, onClose, name, isOpen, onSubmit }) => {
+const ModalDeleteConfirmation = ({ handleCloseModal, onDeleteItem, isOpen }) => {
   
+    const handleSubmit=(e) => {
+
+    };
+
+
   return (
-    <div className={` modal modal_type_${name} `}>
-      <div className="modal__add-form_content">
-        <button className='modal__close modal__add-form_close ' type='button' onClick={onClose} aria-label="Close edit profile"/>
-        <p className='modal__text modal__form_element'>{title}</p>
-        <form onSubmit={onSubmit} >
-          {children}
-          <button type="submit" className="modal__text modal__button">{buttonText}</button>
-        </form>
+    <ModalWithForm
+      title="New garment"
+      buttonText="Add garment"
+      onClose={handleCloseModal} isOpen={isOpen} onSubmit={handleSubmit}
+    >
+      <div className="modal__form_element">
+        <label className="modal__form_label">Name </label>
+        <div>
+          {/* <input
+            className="modal__form modal__input-text"
+            type="text"
+            name="name"
+            minLength="1"
+            maxLength="30"
+            placeholder="Name"
+            value={name} 
+            onChange={handleNameChange}
+          /> */}
+        </div>
       </div>
-    </div>
+      <div>
+        <label className="modal__form_label">Image</label>
+        <div>
+          {/* <input
+            className="modal__form modal__input-text"
+            type="url"
+            name="link"
+            placeholder="Image URL"
+            value={link} 
+            onChange={handleUrlChange}
+          /> */}
+        </div>
+
+        <p>Select the weather type:</p>
+        <div className="modal__input_radio-buttons">
+          <div className="modal__input-radio">
+            <input type="radio" id="hot" value="hot" name="selectTemp" />
+            <label className="modal__input-radio-label">Hot</label>
+          </div>
+          <div className="modal__input-radio">
+            <input type="radio" id="warm" value="warm" name="selectTemp" />
+            <label className="modal__input-radio-label">Warm</label>
+          </div>
+          <div className="modal__input-radio">
+            <input type="radio" id="cold" value="cold" name="selectTemp" />
+            <label className="modal__input-radio-label">Cold</label>
+          </div>
+        </div>
+      </div>
+    </ModalWithForm>
   );
 };
 

@@ -21,8 +21,22 @@ const ModalWithPreview = ({ selectedCard, onClose, onCreateModal }) => {
             <div>Weather: {selectedCard.weather}</div>
           </div>
           <div className="modal__preview_delete">
-            <button type="text" className="modal__preview_delete-text" onClick={onCreateModal} >Delete Item</button>
-            
+            <button
+              type="text"
+              className="modal__preview_delete-text"
+              onClick={onCreateModal}
+            >
+              Delete Item
+            </button>
+            <div>
+              <button
+                className="header__button"
+                type="text"
+                onClick={onCreateModal}
+              >
+                + Add clothes
+              </button>
+            </div>
           </div>
         </div>
       </div>

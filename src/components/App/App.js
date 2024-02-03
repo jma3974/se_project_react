@@ -13,6 +13,7 @@ import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperature
 import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min.js";
 import Profile from "../Profile/Profile.js";
 import AddItemModal from "../../AddItemModal/AddItemModal.js";
+import DeleteModalConfirmation from "../ModalDeleteConfirmation/ModalDeleteConfirmation.js";
 
 function App() {
   /* VARIABLES */
@@ -46,6 +47,10 @@ function App() {
     console.log(values);
   };
 
+  const onDeleteItem = (values) => {
+    console.log(values);
+  };
+
   useEffect(() => {
     getForecastWeather()
       .then((data) => {
@@ -72,7 +77,10 @@ function App() {
             <Main weatherTemp={temp} onSelectedCard={handleSelectedCard} />
           </Route>
           <Route path="/profile">
-            <Profile onSelectedCard={handleSelectedCard} onCreateModal={handleCreateModal}/>
+            <Profile
+              onSelectedCard={handleSelectedCard}
+              onCreateModal={handleCreateModal}
+            />
           </Route>
         </Switch>
         <Footer />
@@ -87,6 +95,14 @@ function App() {
           <ModalWithPreview
             selectedCard={selectedCard}
             onClose={handleCloseModal}
+          />
+        )}
+        {activeModal === "create" && (
+          <DeleteModalConfirmation
+            onCreateModal={handleCreateModal}
+            handleCloseModal={handleCloseModal}
+            isOpen={activeModal === "create"}
+            onDeleteItem={onDeleteItem}
           />
         )}
       </CurrentTemperatureUnitContext.Provider>
