@@ -29,6 +29,10 @@ function App() {
     setActiveModal("create");
   };
 
+  const handleDeleteConfirmationModal = () => {
+    setActiveModal("delete");
+  };
+
   const handleCloseModal = () => {
     setActiveModal("");
   };
@@ -93,15 +97,16 @@ function App() {
         )}
         {activeModal === "preview" && (
           <ModalWithPreview
+            onCreateModal={handleCreateModal}
             selectedCard={selectedCard}
             onClose={handleCloseModal}
           />
         )}
         {activeModal === "create" && (
           <DeleteModalConfirmation
-            onCreateModal={handleCreateModal}
+          onCreateModal={handleDeleteConfirmationModal}
             handleCloseModal={handleCloseModal}
-            isOpen={activeModal === "create"}
+            isOpen={activeModal === "delete"}
             onDeleteItem={onDeleteItem}
           />
         )}
