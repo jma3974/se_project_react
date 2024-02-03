@@ -1,6 +1,6 @@
 import "../ModalWithPreview/ModalWithPreview.css";
 
-const ModalWithPreview = ({ selectedCard, onClose }) => {
+const ModalWithPreview = ({ selectedCard, onClose, onCreateModal }) => {
   return (
     <div className={`modal `}>
       <div className="modal__preview_container">
@@ -21,7 +21,8 @@ const ModalWithPreview = ({ selectedCard, onClose }) => {
             <div>Weather: {selectedCard.weather}</div>
           </div>
           <div className="modal__preview_delete">
-            Delete Item
+            <button type="text" className="modal__preview_delete-text" onClick={onCreateModal} >Delete Item</button>
+            
           </div>
         </div>
       </div>

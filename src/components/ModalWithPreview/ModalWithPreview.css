@@ -42,9 +42,17 @@
 .modal__preview_delete {
   display: flex;
   position: absolute;
-  left: 100px;
+  left: 368px;
   color: red;
+  border: none;
 }
+
+.modal__preview_delete-text {
+  color: red;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 
 .modal__preview-text {
   font-family: "Cabinet Grotesk";
@@ -53,7 +61,6 @@
   line-height: 24px;
   color: #000;
   margin-bottom: 12px;
-
 }
 
 .modal__close {
@@ -70,8 +77,6 @@
   transition: opacity ease-in-out 1s;
 }
 
-
-
 .modal__preview_close {
   background-image: url("../../images/close_icon_3.svg");
 }
@@ -83,5 +88,3 @@
   line-height: 20px;
   margin: 0;
 }
-
-
