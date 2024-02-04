@@ -26,10 +26,12 @@ function App() {
 
   /* FUNCTIONS */
   const handleCreateModal = () => {
+    console.log("create");
     setActiveModal("create");
   };
 
   const handleDeleteConfirmationModal = () => {
+    console.log("delete");
     setActiveModal("delete");
   };
 
@@ -102,7 +104,7 @@ function App() {
             onClose={handleCloseModal}
           />
         )}
-        {activeModal === "create" && (
+        {activeModal === "delete" && (
           <DeleteModalConfirmation
           onCreateModal={handleDeleteConfirmationModal}
             handleCloseModal={handleCloseModal}
