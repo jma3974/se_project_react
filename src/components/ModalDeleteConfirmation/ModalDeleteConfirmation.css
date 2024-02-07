@@ -1,4 +1,4 @@
-.modal {
+.modal__delete {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,14 +10,46 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal__add-form_content {
+.modal__delete_block {
   position: relative;
   background-color: white;
-  max-width: 496px;
+  max-width: 670px;
   width: 100%;
-  max-height: 436px;
+  max-height: 280px;
   height: 100%;
   border-radius: 20px;
-  padding: 28px 28px 0 28px;
-  margin: 28px 28px 0 px 28px;
+}
+
+.modal__delete_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.modal__delete_content-text {
+  display: inline;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal__deleteConfirmation_button-delete {
+  color: red;
+}
+
+.modal__deleteConfirmation_button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modal__deleteConfirmation_button:hover {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+
+
+.modal__deleteConfirmation_button-cancel {
 }
