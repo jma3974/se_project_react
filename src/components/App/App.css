@@ -1,1 +1,11 @@
 @import url(../../vendor/fonts.css);
+
+
+.app__page {
+display: flex;
+flex-direction: column;
+max-width: 1480px;
+justify-content: center;
+margin: 0 auto 0 auto;
+
+}

@@ -12,24 +12,25 @@ const ModalDeleteConfirmation = ({
   };
 
   return (
-    <ModalWithForm
-      buttonTextDelete="Yes, delete item"
-      buttonTextCancel="Cancel"
+    <div className="modal"
+      // buttonText="Yes, delete item"
       onClose={handleCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
     >
-      <div className="modal__form_element">
-        <label className="modal__form_label">
+      <div className="modal__deleteForm_element">
+        {/* <label className="modal__form_label">
           Are you sure you want to delete this item? <br />
-          This action is irreversible.{" "}
-        </label>
+          This action is irreversible.
+        </label> */}
+        Are you sure you want to delete this item? <br />
+        This action is irreversible.
       </div>
-      <div>
-        <p>Delete</p>
-        
-      </div>
-    </ModalWithForm>
+      <button type="text" className="modal__deleteForm_button">
+        Yes, delete this item
+</button>
+      
+    </div>
   );
 };
 

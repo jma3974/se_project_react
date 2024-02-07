@@ -73,7 +73,7 @@ function App() {
   console.log(currentTemperatureUnit);
 
   return (
-    <div>
+    <div className="app__page">
       <CurrentTemperatureUnitContext.Provider
         value={{ currentTemperatureUnit, handleToggleSwitchChange }}
       >
@@ -99,14 +99,14 @@ function App() {
         )}
         {activeModal === "preview" && (
           <ModalWithPreview
-            onCreateModal={handleCreateModal}
+            onCreateModal={handleDeleteConfirmationModal}
             selectedCard={selectedCard}
             onClose={handleCloseModal}
           />
         )}
         {activeModal === "delete" && (
           <DeleteModalConfirmation
-          onCreateModal={handleDeleteConfirmationModal}
+            onCreateModal={handleDeleteConfirmationModal}
             handleCloseModal={handleCloseModal}
             isOpen={activeModal === "delete"}
             onDeleteItem={onDeleteItem}

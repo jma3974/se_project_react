@@ -99,3 +99,10 @@
 .modal__button:hover {
   cursor: pointer;
 }
+
+.modal__deleteForm_element {
+display: flex;
+justify-content: center;
+
+}
+
