@@ -85,6 +85,7 @@
 
 .modal__preview_close {
   background-image: url("../../images/close_icon_3.svg");
+  background-color: red;
 }
 
 .modal__text {

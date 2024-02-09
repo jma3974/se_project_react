@@ -22,7 +22,7 @@ const ModalDeleteConfirmation = ({
       <div className="modal__delete_block">
 
       <button
-          className="modal__close modal__preview_close"
+          className="modal__close modal__delete_close"
           type="button"
           onClick={handleCloseModal}
         />

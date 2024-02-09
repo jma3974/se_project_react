@@ -65,6 +65,6 @@
   transition: opacity ease-in-out 1s;
 }
 
-.modal__preview_close {
+.modal__delete_close {
   background-image: url("../../images/close_icon.svg");
 }
