@@ -11,7 +11,7 @@ const ItemCard = ({ clothingItem, onSelectedCard }) => {
       <div>
         <img
           className="main__cards-image"
-          src={clothingItem.link}
+          src={clothingItem.imageUrl}
           alt={clothingItem.name}
           onClick={() => onSelectedCard(clothingItem)}
         />

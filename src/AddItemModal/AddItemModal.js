@@ -8,7 +8,7 @@ const AddItemModal = ({handleCloseModal, onAddItem, isOpen}) => {
         setName(e.target.value)
     };
 
-    const [link, setURL] = useState("")
+    const [imageUrl, setURL] = useState("")
     const handleUrlChange =(e) => {
         console.log(e.target.value)
         setURL(e.target.value)
@@ -16,7 +16,7 @@ const AddItemModal = ({handleCloseModal, onAddItem, isOpen}) => {
 
     const handleSubmit =(e) => {
         e.preventDefault();
-        onAddItem ({name, link})
+        onAddItem ({name, imageUrl})
     };
 
   return (
@@ -46,9 +46,9 @@ const AddItemModal = ({handleCloseModal, onAddItem, isOpen}) => {
           <input
             className="modal__form modal__input-text"
             type="url"
-            name="link"
+            name="imageUrl"
             placeholder="Image URL"
-            value={link} 
+            value={imageUrl} 
             onChange={handleUrlChange}
           />
         </div>

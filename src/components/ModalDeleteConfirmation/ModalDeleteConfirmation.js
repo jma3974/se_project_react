@@ -15,9 +15,9 @@ const ModalDeleteConfirmation = ({
     <div
       className="modal__delete"
      
-      onClose={handleCloseModal}
-      isOpen={isOpen}
-      onSubmit={handleSubmit}
+      // onClose={handleCloseModal}
+      // isOpen={isOpen}
+      // onSubmit={handleSubmit}
     >
       <div className="modal__delete_block">
 
@@ -37,7 +37,7 @@ const ModalDeleteConfirmation = ({
             <button
               type="text"
               className="modal__deleteConfirmation_button modal__deleteConfirmation_button-delete"
-            onclick={onDeleteItem}>
+            onClick={onDeleteItem}>
               Yes, delete this item
             </button>
           </div>

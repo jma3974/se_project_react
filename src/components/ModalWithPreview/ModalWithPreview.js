@@ -24,7 +24,7 @@ const ModalWithPreview = ({ selectedCard, onClose, onCreateModal }) => {
             <button
               type="text"
               className="modal__preview_delete-text"
-              onClick={onCreateModal}
+              onClick={() => onCreateModal(selectedCard._id)}
             >
               Delete Item
             </button>

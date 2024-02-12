@@ -14,6 +14,7 @@ import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min.js";
 import Profile from "../Profile/Profile.js";
 import AddItemModal from "../../AddItemModal/AddItemModal.js";
 import DeleteModalConfirmation from "../ModalDeleteConfirmation/ModalDeleteConfirmation.js";
+import api from "../../utils/api.js";
 
 function App() {
   /* VARIABLES */
@@ -50,11 +51,17 @@ function App() {
   };
 
   const onAddItem = (values) => {
-    console.log(values);
+    api.addItems(values)
+    
   };
 
-  const onDeleteItem = (values) => {
-    console.log(values);
+  const onDeleteItem = () => {
+    console.log(selectedCard);
+    deleteItems(selectedCard._id)
+      .then(res => res.json())
+      .then(data => {
+        console.log('data', data)
+      })
   };
 
   useEffect(() => {
