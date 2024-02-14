@@ -19,20 +19,18 @@ import api from "../../utils/api.js";
 function App() {
   /* VARIABLES */
 
-  // const temperature = "55F";
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+  const [clothingItem, setClothingItem] = useState([]);
 
   /* FUNCTIONS */
   const handleCreateModal = () => {
-    console.log("create");
     setActiveModal("create");
   };
 
   const handleDeleteConfirmationModal = () => {
-    console.log("delete");
     setActiveModal("delete");
   };
 
@@ -50,19 +48,32 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
+  /* API CALLS */
+
   const onAddItem = (values) => {
     api.addItems(values)
-    
+    .then((item) => {
+      setClothingItem([...clothingItem, item]);
+      handleCloseModal();
+    });
   };
 
   const onDeleteItem = () => {
     console.log(selectedCard);
-    deleteItems(selectedCard._id)
-      .then(res => res.json())
-      .then(data => {
-        console.log('data', data)
-      })
+    api
+      .deleteItems(selectedCard._id)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data", data);
+      });
   };
+
+  // useEffect(() => {
+  //   api.getItems().then((items) =>{
+  //   setClothingItem(items);
+
+  //   }).catch((err) => console.log(err));
+  // });
 
   useEffect(() => {
     getForecastWeather()

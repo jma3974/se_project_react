@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3001";
 
-checkServerResponse = (res) => {
+const checkServerResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
 };
 
@@ -10,7 +10,7 @@ const deleteItems = (id) => {
     headers: {
       "Content-Type": "application/json",
     },
-  });
+  }).then(checkServerResponse);
 };
 
 const addItems = () => {
@@ -19,7 +19,7 @@ const addItems = () => {
     headers: {
       "Content-Type": "application/json",
     },
-  });
+  }).then(checkServerResponse);
 };
 
 const getItems = () => {
@@ -27,7 +27,7 @@ const getItems = () => {
     headers: {
       "Content-Type": "application/json",
     },
-  });
+  }).then(checkServerResponse);
 };
 
 const api = {
