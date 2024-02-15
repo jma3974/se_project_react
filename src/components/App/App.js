@@ -51,8 +51,7 @@ function App() {
   /* API CALLS */
 
   const onAddItem = (values) => {
-    api.addItems(values)
-    .then((item) => {
+    api.addItems(values).then((item) => {
       setClothingItem([...clothingItem, item]);
       handleCloseModal();
     });
@@ -68,12 +67,14 @@ function App() {
       });
   };
 
-  // useEffect(() => {
-  //   api.getItems().then((items) =>{
-  //   setClothingItem(items);
-
-  //   }).catch((err) => console.log(err));
-  // });
+  useEffect(() => {
+    api
+      .getItems()
+      .then((items) => {
+        setClothingItem(items);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   useEffect(() => {
     getForecastWeather()
