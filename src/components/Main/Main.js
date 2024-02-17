@@ -1,11 +1,11 @@
 import "../Main/Main.css";
 import WeatherCard from "../WeatherCard/WeatherCard.js";
 import ItemCard from "../ItemCard/ItemCard.js";
-import { defaultClothingItems } from "../../utils/constants.js";
+// import { defaultClothingItems } from "../../utils/constants.js";
 import { useContext } from "react";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
 
-function Main({ weatherTemp, onSelectedCard }) {
+function Main({ weatherTemp, onSelectedCard, clothingItems }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   console.log(currentTemperatureUnit);
   const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || 999;
@@ -33,7 +33,7 @@ function Main({ weatherTemp, onSelectedCard }) {
     }
   })();
 
-  const filteredCards = defaultClothingItems.filter(
+  const filteredCards = clothingItems.filter(
     (clothingItem) => {
       return clothingItem.weather.toLowerCase() === weatherType;
     },

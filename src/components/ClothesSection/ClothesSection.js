@@ -3,7 +3,7 @@ import ItemCard from "../ItemCard/ItemCard.js";
 import "../ItemCard/ItemCard.css";
 import "./ClothesSection.css";
 
-const ClothingSection = ({ onCreateModal, onSelectedCard }) => {
+const ClothingSection = ({ onCreateModal, onSelectedCard, clothingItems }) => {
   return (
     <div>
       <section className="profile__clothingItems_header">
@@ -19,7 +19,7 @@ const ClothingSection = ({ onCreateModal, onSelectedCard }) => {
         </div>
       </section>
       <section className="profile__clothingItems">
-        {defaultClothingItems.map((clothingItem) => (
+        {clothingItems.map((clothingItem) => (
           <ItemCard
             clothingItem={clothingItem}
             key={clothingItem._id}

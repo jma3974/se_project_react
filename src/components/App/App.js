@@ -2,7 +2,6 @@ import "../App/App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main.js";
 import Footer from "../Footer/Footer.js";
-import ModalWithForm from "../ModalWithForm/ModalWithForm.js";
 import ModalWithPreview from "../ModalWithPreview/ModalWithPreview.js";
 import {
   getForecastWeather,
@@ -23,7 +22,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-  const [clothingItem, setClothingItem] = useState([]);
+  const [clothingItems, setClothingItem] = useState([]);
 
   /* FUNCTIONS */
   const handleCreateModal = () => {
@@ -52,7 +51,7 @@ function App() {
 
   const onAddItem = (values) => {
     api.addItems(values).then((item) => {
-      setClothingItem([...clothingItem, item]);
+      setClothingItem([...clothingItems, item]);
       handleCloseModal();
     });
   };
@@ -99,12 +98,13 @@ function App() {
         <Header onCreateModal={handleCreateModal} />
         <Switch>
           <Route exact path="/">
-            <Main weatherTemp={temp} onSelectedCard={handleSelectedCard} />
+            <Main weatherTemp={temp} onSelectedCard={handleSelectedCard} clothingItems={clothingItems} />
           </Route>
           <Route path="/profile">
             <Profile
               onSelectedCard={handleSelectedCard}
               onCreateModal={handleCreateModal}
+              clothingItems = {clothingItems}
             />
           </Route>
         </Switch>
