@@ -1,4 +1,4 @@
-import "../App/App.css";
+import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main.js";
 import Footer from "../Footer/Footer.js";
@@ -7,11 +7,11 @@ import {
   getForecastWeather,
   parseWeatherData,
 } from "../../utils/weatherAPI.js";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
-import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min.js";
+import { Switch, Route } from "react-router-dom";
 import Profile from "../Profile/Profile.js";
-import AddItemModal from "../../AddItemModal/AddItemModal.js";
+import AddItemModal from "../AddItemModal/AddItemModal.js";
 import DeleteModalConfirmation from "../ModalDeleteConfirmation/ModalDeleteConfirmation.js";
 import api from "../../utils/api.js";
 
@@ -43,8 +43,7 @@ function App() {
   };
 
   const handleToggleSwitchChange = () => {
-    if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
-    if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
+    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
   };
 
   /* API CALLS */
@@ -53,7 +52,7 @@ function App() {
     api.addItems(values).then((item) => {
       setClothingItem([...clothingItems, item]);
       handleCloseModal();
-    });
+    }).catch((err) => console.log(err));
   };
 
   const onDeleteItem = () => {
@@ -62,7 +61,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         console.log("data", data);
-      });
+      }).catch((err) => console.log(err));
   };
 
   useEffect(() => {

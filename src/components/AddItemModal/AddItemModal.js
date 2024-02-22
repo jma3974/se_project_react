@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import ModalWithForm from "../components/ModalWithForm/ModalWithForm";
+import React, { useEffect, useState } from "react";
+import ModalWithForm from "../ModalWithForm/ModalWithForm.js";
 
 const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
   const [name, setName] = useState("");
@@ -12,10 +12,23 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
     setURL(e.target.value);
   };
 
+  const [weather, setWeather] = useState("");
+  const handleWeatheChange = (e) => {
+    setWeather(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddItem({ name, imageUrl });
+    onAddItem({ name, imageUrl, weather });
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      setName("");
+      setURL("");
+      setWeather("");
+    }
+  }, [isOpen]);
 
   return (
     <ModalWithForm
@@ -56,15 +69,33 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
         <p>Select the weather type:</p>
         <div className="modal__input_radio-buttons">
           <div className="modal__input-radio">
-            <input type="radio" id="hot" value="hot" name="selectTemp" />
+            <input
+              type="radio"
+              id="hot"
+              value="hot"
+              name="selectTemp"
+              onChange={handleWeatheChange}
+            />
             <label className="modal__input-radio-label">Hot</label>
           </div>
           <div className="modal__input-radio">
-            <input type="radio" id="warm" value="warm" name="selectTemp" />
+            <input
+              type="radio"
+              id="warm"
+              value="warm"
+              name="selectTemp"
+              onChange={handleWeatheChange}
+            />
             <label className="modal__input-radio-label">Warm</label>
           </div>
           <div className="modal__input-radio">
-            <input type="radio" id="cold" value="cold" name="selectTemp" />
+            <input
+              type="radio"
+              id="cold"
+              value="cold"
+              name="selectTemp"
+              onChange={handleWeatheChange}
+            />
             <label className="modal__input-radio-label">Cold</label>
           </div>
         </div>

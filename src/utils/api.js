@@ -1,8 +1,6 @@
-const baseUrl = "http://localhost:3001";
+import checkServerResponse from "../utils/utils.js";
 
-const checkServerResponse = (res) => {
-  return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
-};
+const baseUrl = "http://localhost:3001";
 
 const deleteItems = (id) => {
   return fetch(`${baseUrl}/items/${id}`, {
