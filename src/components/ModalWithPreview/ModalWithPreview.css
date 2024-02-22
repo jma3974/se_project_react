@@ -56,9 +56,7 @@
 .modal__preview_delete-text:hover {
   /* background-color: rgba(0, 0, 0, 0.6); */
   cursor: pointer;
-
 }
-
 
 .modal__preview-text {
   font-family: "Cabinet Grotesk";

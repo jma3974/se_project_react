@@ -6,8 +6,6 @@
   margin-top: 40px;
 }
 
-
-
 .main__cards-image {
   width: 325px;
   height: 328px;
@@ -45,5 +43,5 @@
 }
 
 .main__cards-like:hover {
-cursor: pointer;
+  cursor: pointer;
 }

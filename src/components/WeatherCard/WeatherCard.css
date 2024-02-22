@@ -5,16 +5,15 @@
   align-items: center;
 }
 
+.weatherCard__temp {
+  position: absolute;
+  /* display: flex; */
+  font-size: 36px;
+  font-weight: 700px;
+  margin: 20px auto 20px 16px;
+  color: white;
+}
 
-  .weatherCard__temp {
-    position: absolute;
-    /* display: flex; */
-    font-size: 36px;
-    font-weight: 700px;
-    margin: 20px auto 20px 16px;
-    color: white;
-  }
-  
-  .weatherCard__icon {
-    width: 100%;
-  }
+.weatherCard__icon {
+  width: 100%;
+}

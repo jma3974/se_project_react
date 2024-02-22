@@ -49,10 +49,13 @@ function App() {
   /* API CALLS */
 
   const onAddItem = (values) => {
-    api.addItems(values).then((item) => {
-      setClothingItem([...clothingItems, item]);
-      handleCloseModal();
-    }).catch((err) => console.log(err));
+    api
+      .addItems(values)
+      .then((item) => {
+        setClothingItem([...clothingItems, item]);
+        handleCloseModal();
+      })
+      .catch((err) => console.log(err));
   };
 
   const onDeleteItem = () => {
@@ -61,7 +64,8 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         console.log("data", data);
-      }).catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {

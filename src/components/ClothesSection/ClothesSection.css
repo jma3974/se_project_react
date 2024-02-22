@@ -1,8 +1,8 @@
 .profile__clothingItems {
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    max-width: 1015px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1015px;
 }

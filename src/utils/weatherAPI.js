@@ -2,12 +2,11 @@
 
 // key: 0f5c09e8ea7ca947106c19059353b7c5
 
-import checkServerResponse from "../utils/utils"
+import checkServerResponse from "../utils/utils";
 
 const latitude = 47.38;
 const longitude = -122.23;
 const APIKey = "0f5c09e8ea7ca947106c19059353b7c5";
-
 
 export const getForecastWeather = () => {
   const weatherAPI = fetch(
@@ -23,15 +22,12 @@ export const parseWeatherData = (data) => {
   const weather = {
     temperature: {
       F: Math.round(temperature),
-      C: Math.round((temperature - 32) * 5 / 9),
+      C: Math.round(((temperature - 32) * 5) / 9),
     },
   };
 
   return weather;
 };
-
-
-
 
 // weather.temperature.F = `${Math.round(data.main.temp)}°F`;
 // weather.temperature.C = `${Math.round((data.main.temp - 32) * 5/9)}°C`;

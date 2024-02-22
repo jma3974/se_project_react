@@ -44,7 +44,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  }
+}
 
 .modal__form {
   border-bottom: 1pt solid black;
@@ -60,7 +60,7 @@
 }
 
 .modal__input_radio-buttons {
-  color: rgba(0 ,0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   padding-bottom: 24px;
 }
 
@@ -69,12 +69,8 @@
 }
 
 .modal__input-radio-label {
- padding-left: 11px;
-
+  padding-left: 11px;
 }
-
-
-
 
 .modal__form_label {
   display: inline-block;
@@ -101,8 +97,6 @@
 }
 
 .modal__deleteForm_element {
-display: flex;
-justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
-

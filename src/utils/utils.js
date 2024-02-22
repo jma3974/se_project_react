@@ -1,6 +1,5 @@
 const checkServerResponse = (res) => {
-    return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
-  };
+  return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
+};
 
-
-  export default checkServerResponse;
+export default checkServerResponse;

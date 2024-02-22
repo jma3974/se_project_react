@@ -1,11 +1,13 @@
-import "../Footer/Footer.css"
+import "../Footer/Footer.css";
 
 function Footer() {
-      return <footer className="footer">
+  return (
+    <footer className="footer">
       <div>Developed by Jon Anderson</div>
 
       <div>2023</div>
-    </footer>;
-  }
+    </footer>
+  );
+}
 
-  export default Footer
+export default Footer;
