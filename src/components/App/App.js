@@ -57,7 +57,6 @@ function App() {
   };
 
   const onDeleteItem = () => {
-    console.log(selectedCard);
     api
       .deleteItems(selectedCard._id)
       .then((res) => res.json())
@@ -81,14 +80,11 @@ function App() {
         const temperature = parseWeatherData(data);
 
         setTemp(temperature);
-        console.log(temperature);
       })
       .catch((error) => {
         console.error("Error", error);
       });
   }, []);
-
-  console.log(currentTemperatureUnit);
 
   return (
     <div className="app__page">
@@ -98,13 +94,17 @@ function App() {
         <Header onCreateModal={handleCreateModal} />
         <Switch>
           <Route exact path="/">
-            <Main weatherTemp={temp} onSelectedCard={handleSelectedCard} clothingItems={clothingItems} />
+            <Main
+              weatherTemp={temp}
+              onSelectedCard={handleSelectedCard}
+              clothingItems={clothingItems}
+            />
           </Route>
           <Route path="/profile">
             <Profile
               onSelectedCard={handleSelectedCard}
               onCreateModal={handleCreateModal}
-              clothingItems = {clothingItems}
+              clothingItems={clothingItems}
             />
           </Route>
         </Switch>

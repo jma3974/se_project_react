@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import ModalWithForm from '../components/ModalWithForm/ModalWithForm';
+import React, { useState } from "react";
+import ModalWithForm from "../components/ModalWithForm/ModalWithForm";
 
-const AddItemModal = ({handleCloseModal, onAddItem, isOpen}) => {
-    const [name, setName] = useState("")
-    const handleNameChange =(e) => {
-        console.log(e.target.value)
-        setName(e.target.value)
-    };
+const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
+  const [name, setName] = useState("");
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
 
-    const [imageUrl, setURL] = useState("")
-    const handleUrlChange =(e) => {
-        console.log(e.target.value)
-        setURL(e.target.value)
-    };
+  const [imageUrl, setURL] = useState("");
+  const handleUrlChange = (e) => {
+    setURL(e.target.value);
+  };
 
-    const handleSubmit =(e) => {
-        e.preventDefault();
-        onAddItem ({name, imageUrl})
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onAddItem({ name, imageUrl });
+  };
 
   return (
     <ModalWithForm
       title="New garment"
       buttonText="Add garment"
-      onClose={handleCloseModal} isOpen={isOpen} onSubmit={handleSubmit}
+      onClose={handleCloseModal}
+      isOpen={isOpen}
+      onSubmit={handleSubmit}
     >
       <div className="modal__form_element">
         <label className="modal__form_label">Name </label>
@@ -35,7 +35,7 @@ const AddItemModal = ({handleCloseModal, onAddItem, isOpen}) => {
             minLength="1"
             maxLength="30"
             placeholder="Name"
-            value={name} 
+            value={name}
             onChange={handleNameChange}
           />
         </div>
@@ -48,7 +48,7 @@ const AddItemModal = ({handleCloseModal, onAddItem, isOpen}) => {
             type="url"
             name="imageUrl"
             placeholder="Image URL"
-            value={imageUrl} 
+            value={imageUrl}
             onChange={handleUrlChange}
           />
         </div>

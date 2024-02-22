@@ -17,7 +17,7 @@ export const getForecastWeather = () => {
   const weatherAPI = fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKey}`
   ).then(processServerResponse);
-  console.log("API Call");
+
   return weatherAPI;
 };
 
@@ -30,7 +30,7 @@ export const parseWeatherData = (data) => {
       C: Math.round((temperature - 32) * 5 / 9),
     },
   };
-  console.log(weather);
+
   return weather;
 };
 

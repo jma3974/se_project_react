@@ -7,9 +7,8 @@ import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperature
 
 function Main({ weatherTemp, onSelectedCard, clothingItems }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  console.log(currentTemperatureUnit);
+
   const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || 999;
-  console.log(temp)
 
   const weatherType = (() => {
     if (currentTemperatureUnit === "F") {
