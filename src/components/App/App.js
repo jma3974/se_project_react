@@ -2,7 +2,7 @@ import "../App/App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main.js";
 import Footer from "../Footer/Footer.js";
-import ModalWithPreview from "../ModalWithPreview/ModalWithPreview.js";
+import ItemModal from "../ModalWithPreview/ModalWithPreview.js";
 import {
   getForecastWeather,
   parseWeatherData,
@@ -117,7 +117,7 @@ function App() {
           />
         )}
         {activeModal === "preview" && (
-          <ModalWithPreview
+          <ItemModal
             onCreateModal={handleDeleteConfirmationModal}
             selectedCard={selectedCard}
             onClose={handleCloseModal}

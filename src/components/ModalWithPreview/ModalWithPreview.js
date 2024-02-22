@@ -1,6 +1,6 @@
 import "../ModalWithPreview/ModalWithPreview.css";
 
-const ModalWithPreview = ({ selectedCard, onClose, onCreateModal }) => {
+const ItemModal = ({ selectedCard, onClose, onCreateModal }) => {
   return (
     <div className={`modal `}>
       <div className="modal__preview_container">
@@ -35,4 +35,4 @@ const ModalWithPreview = ({ selectedCard, onClose, onCreateModal }) => {
   );
 };
 
-export default ModalWithPreview;
+export default ItemModal;
