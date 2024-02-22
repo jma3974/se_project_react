@@ -3,7 +3,7 @@ import ItemCard from "../ItemCard/ItemCard.js";
 import "../ItemCard/ItemCard.css";
 import "./ClothesSection.css";
 
-const ClothingSection = ({ onCreateModal, onSelectedCard, clothingItems }) => {
+const ClothesSection = ({ onCreateModal, onSelectedCard, clothingItems }) => {
   return (
     <div>
       <section className="profile__clothingItems_header">
